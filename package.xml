@@ -17,6 +17,8 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>libboost-dev</build_depend>
   <build_depend>libconsole-bridge-dev</build_depend>
+  <build_depend>liburdfdom-headers-dev</build_depend>
+  <build_depend>urdfdom_py</build_depend>
   <build_depend>tinyxml2_vendor</build_depend>
   <build_depend>urdf</build_depend>
   <build_depend>urdfdom_headers</build_depend>

@@ -39,6 +39,7 @@
 
 #include <memory>
 #include <srdfdom/model.h>  // use their struct datastructures
+#include <srdfdom/visibility_control.hpp>
 
 namespace srdf
 {
@@ -48,7 +49,7 @@ namespace srdf
 // ******************************************************************************************
 // ******************************************************************************************
 
-class SRDFWriter
+class SRDFDOM_PUBLIC SRDFWriter
 {
 public:
   // ******************************************************************************************
@@ -182,6 +183,7 @@ public:
 // ******************************************************************************************
 // Typedef
 // ******************************************************************************************
+SRDFDOM_PUBLIC
 typedef std::shared_ptr<SRDFWriter> SRDFWriterPtr;
 }  // namespace srdf
 
