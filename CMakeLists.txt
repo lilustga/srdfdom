@@ -44,11 +44,6 @@ ament_target_dependencies(${PROJECT_NAME} PUBLIC
   urdf
 )
 
-# Causes the visibility macros to use dllexport rather than dllimport,
-# which is appropriate when building the dll but not consuming it.
-target_compile_definitions(${PROJECT_NAME}
-  PRIVATE "SRDFDOM_BUILDING_LIBRARY")
-
 install(TARGETS ${PROJECT_NAME}
   DESTINATION lib
 )
@@ -63,6 +58,7 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
